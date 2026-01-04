@@ -4,7 +4,7 @@ insert into customers VALUES (8, 'kumar', 'null', null ,null);
 -- select all records with atleast 1 null attribute
 -- where (email = null) -> here the comparision returns unknown but where always return the record whose condition return true. So If we want to check whether the attribute is null or not we need to use 'column is null'.
 
-select * from customers where email=null; -- returns unknown to where
+-- select * from customers where email=null; -- returns unknown to where
 select * from customers where email='null';
 select id, name from customers where email is null or phno is null or amount is null;
 
