@@ -79,6 +79,8 @@ update test set name='Raja Raja Cholan', sno=4 where sno=2;
 delete from test1.test where sno=2;
 -- If you want to delete all rows in a table. You have table name with 0 rows
 truncate table test1.test;
+-- or truncate test1.test;
+
 -- If you want to delete the rows and the table itself
 drop table if exists test1.test;
 
