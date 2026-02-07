@@ -33,7 +33,7 @@ VALUES
 TRUNCATE customerTransactions;
 
 desc customerTransactions;
-select * from aggregation.customerTransactions;
+select * from customerTransactions;
 
 select count(*) from customerTransactions;
 
@@ -43,7 +43,7 @@ SELECT sum(amount) as tot_spending, min(amount) as min_amt_spent, max(amount) as
 
 
 -- group by
-select login_device, sum(amount) from aggregation.customertransactions group by login_device;
+select login_device, sum(amount) from customertransactions group by login_device;
 
 -- group by with having
-select login_device, sum(amount) as tot_amt_spent from aggregation.customertransactions group by login_device having tot_amt_spent > 10000;
+select login_device, sum(amount) as tot_amt_spent from customertransactions group by login_device having tot_amt_spent > 10000;
