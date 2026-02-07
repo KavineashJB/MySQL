@@ -95,6 +95,9 @@ desc citizen;
 
 insert into citizen (sno, name) values (1,'kamal'),(2,'rani');
 
-insert into citizen VALUES (3,'ram','usa'),(4,'rocky','kor')
+insert into citizen VALUES (3,'ram','usa'),(4,'rocky','kor');
+
+insert into citizen VALUES (5,'kannan'); 
+-- Error: Column count doesn't match value count at row 1
 
 SELECT * from citizen;
