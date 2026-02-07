@@ -130,10 +130,10 @@ This section is ideal for:
 
 Special thanks to:
 
-- **SB Gowtham**
-- **Data Engineering – YouTube Channel**
+- **[SB Gowtham](https://www.linkedin.com/in/sbgowtham/)**
+- **[Data Engineering – YouTube Channel](https://www.youtube.com/channel/UC9xghV-TcBwGvK-aEMhpt5w)**
 
-Their educational content and insights played a significant role in shaping the structure and depth of this preparation material.
+Their educational content and guidance were instrumental in shaping this MySQL interview preparation material.
 
 ---
 
