@@ -28,19 +28,26 @@ create table customer (
 )
 
 
--- 2. Primary, Composite, Candidate, super keys
--- Primary key 
+-- 2. Primary, Composite, Candidate, Super Keys
+
+-- Primary Key
 --     * Can be single-column or multi-column
 --     * Must uniquely identify each row
 --     * Cannot contain NULL
+--     * Only one primary key per table
 
--- Composite key
---     * Composite key = 2 or more columns together identify a row
---     * A composite key may or may not be minimal
+-- Composite Key
+--     * A single key formed using two or more columns
+--     * All columns together uniquely identify a row
+--     * It is minimal by definition (no extra columns)
+--     * Can be a primary key or candidate key
 
--- Candidate key
---     * A candidate key is a minimal set of columns that uniquely identifies a row.
+-- Candidate Key
+--     * A minimal set of columns that uniquely identifies a row
+--     * A table can have multiple candidate keys
+--     * One candidate key is selected as the primary key
 
--- Super key
---     * A super key is any set of columns that uniquely identifies a row, with or without extra (unnecessary) columns.
+-- Super Key
+--     * Any set of columns that uniquely identifies a row
+--     * May contain extra (non-minimal) columns
 --     * Candidate keys are minimal super keys
