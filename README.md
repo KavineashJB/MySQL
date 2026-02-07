@@ -130,8 +130,8 @@ This section is ideal for:
 
 Special thanks to:
 
-- **[SB Gowtham](https://www.linkedin.com/in/sbgowtham/)**
-- **[Data Engineering – YouTube Channel](https://www.youtube.com/channel/UC9xghV-TcBwGvK-aEMhpt5w)**
+- <a href="https://www.linkedin.com/in/sbgowtham/" target="_blank" rel="noopener noreferrer">SB Gowtham</a>
+- <a href="https://www.youtube.com/channel/UC9xghV-TcBwGvK-aEMhpt5w" target="_blank" rel="noopener noreferrer">Data Engineering – YouTube Channel</a>
 
 Their educational content and guidance were instrumental in shaping this MySQL interview preparation material.
 
