@@ -8,7 +8,11 @@ select * from tb;
 -- add column
 alter table tb add column city varchar(25);
 -- rename column
-alter table tb rename to tb;
+alter table tb rename to renamed_tb;
+desc renamed_tb;
+
+-- rename renamed_tb to tb
+alter table renamed_tb rename to tb;
 desc tb;
 select * from tb;
 -- drop column
@@ -23,4 +27,5 @@ alter table tb modify phno varchar(30) not null;
 alter table tb drop check const_city;
 
 
+-- show the updated create table sql code
 show create table tb;
