@@ -25,7 +25,7 @@ select * from customers;
 -- max amount spent by each customer
 select c.id, (select max(o.amount) from orders o where o.customer_id=c.id) from customers c;
 
--- select customer_name where amount>5000
+-- select customer_name where amount>10000
 select c.id, c.name from customers c where c.id in
 (select distinct o.customer_id from orders o where o.amount>10000);
 
