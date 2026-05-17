@@ -39,7 +39,7 @@
 -- ============================================
 
 
--- How MySQL actually processes this:
+-- How MySQL actually processes this keywords in Hierarchical Order:
 
 -- FROM → load employees and departments tables
 -- INNER JOIN → combine rows from both tables
@@ -52,6 +52,7 @@
 -- SELECT → pick columns & aggregates
 -- DISTINCT → remove duplicate result rows
 -- ORDER BY → sort the output
+-- OFFSET → skips the no.of rows
 -- LIMIT → restrict number of rows returned
 
 
