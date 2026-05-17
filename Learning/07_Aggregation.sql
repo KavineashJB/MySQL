@@ -47,3 +47,8 @@ select login_device, sum(amount) from customertransactions group by login_device
 
 -- group by with having
 select login_device, sum(amount) as tot_amt_spent from customertransactions group by login_device having tot_amt_spent > 10000;
+
+-- Example:
+LIMIT 2, 3
+-- Same as:
+OFFSET 2 LIMIT 3
