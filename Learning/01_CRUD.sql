@@ -42,10 +42,12 @@
 -- How MySQL actually processes this:
 
 -- FROM → load employees and departments tables
--- JOIN → combine rows from both tables
+-- INNER JOIN → combine rows from both tables
 -- ON → match rows using e.dept_id = d.dept_id
+-- OUTER(LEFT,RIGHT,FULL) → return the unmatched rows
 -- WHERE → filter rows (salary > 50000)
 -- GROUP BY → group rows by department
+-- AGGREGATE FUNCTIONS → COUNT, SUM, AVG, MIN, MAX
 -- HAVING → filter groups (COUNT > 5)
 -- SELECT → pick columns & aggregates
 -- DISTINCT → remove duplicate result rows
