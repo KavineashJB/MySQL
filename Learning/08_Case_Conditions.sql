@@ -17,6 +17,7 @@ VALUES
 (5, 'Karthik R',    'karthik.r@gmail.com',   null, 18999.99,'salem');
 
 SELECT * from customers limit 2 offset 1;
+-- limit 1, 2; same as limit 2 offset 1
 -- use limit, becaz most of the apps running on cloud(firestore) it charges by how many times the data reads and writes. so limit reads a limited no.of records. it's a cost saving factor
 
 -- syntax
@@ -26,6 +27,9 @@ SELECT * from customers limit 2 offset 1;
 --     when 1<1 then 'second 1 is large'
 --     else 'both are equal'
 -- END as comparision;
+
+-- for simple if statement
+-- if(1 > 1, "Correct Answer", "Wrong Answer")
 
 
 select name,

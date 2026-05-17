@@ -1,4 +1,14 @@
 drop table if exists restaurants;
+
+-- create table customers (
+--     id int PRIMARY KEY,
+--     name varchar(100) not null,
+--     email VARCHAR(100),
+--     phno char(10) check (length(phno)=10),
+--     amount DECIMAL(10,2),
+--     city varchar(100)
+-- );
+
 create table restaurants (
     id int PRIMARY KEY,
     name varchar(100) not null,

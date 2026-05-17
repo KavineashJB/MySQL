@@ -3,7 +3,8 @@ desc customers;
 SELECT * from customers;
 
 -- methods
--- length
+-- length(str)
+-- upper(str), lower(str) => convert to uppercase and lowercase letters
 -- concat(str1,str2,...)
 -- substring(str, pos, length) => pos from 1
 -- substring_index(str,delimeter,1=before/-1=after) => for splitting string
