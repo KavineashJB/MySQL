@@ -68,3 +68,9 @@ select c.id, c.name, r.id, r.name, o.order_id, o.order_date
 from restaurants r
 join orders o on o.restaurant_id = r.id
 join customers c on c.id = o.cust_id;
+
+
+-- important info
+-- Diff b/w WHERE and ON keywords:
+-- For LEFT JOIN: - WHERE can accidentally remove NULL rows
+-- So ON is safer.
