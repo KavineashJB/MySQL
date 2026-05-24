@@ -29,7 +29,7 @@ SELECT * FROM products;
 SELECT * , 
 lag(price) over (PARTITION BY id order by year asc) as prod_prev_prc, price - lag(price) over (PARTITION BY id order by year asc) as diff from products;
 
--- lag() => returns the previous price of the current id
+-- lead() => returns the next price of the current id
 SELECT * , 
 lead(price) over (PARTITION BY id order by year asc) as salary_change, lead(price) over (PARTITION BY id order by year asc) - price as diff from products;
 
@@ -38,7 +38,7 @@ select *,
 first_value(price) over (PARTITION BY id order by year asc) as initial_prc from products;
 
 select *, 
-last_value(price) over (PARTITION BY id order by year asc rows between current row and UNBOUNDED FOLLOWING) as initial_prc from products;
+last_value(price) over (PARTITION BY id order by year asc rows between current row and UNBOUNDED FOLLOWING) as final_prc from products;
 
 -- nth_value(column, nth_largest) => return nth largest of specified column
 select *, 

@@ -56,6 +56,17 @@
 -- LIMIT → restrict number of rows returned
 
 
+-- General Order
+-- CTE (with name as ())
+-- SELECT
+-- FROM
+-- WHERE
+-- GROUP BY
+-- HAVING
+-- WINDOW     **imp**
+-- ORDER BY
+-- LIMIT
+
 show databases;
 
 create database test2;
@@ -76,10 +87,11 @@ insert into test1.test values (2,'Raja'),(3,'vimal raj');
 
 select * from test;
 
-update test set name='Raja Raja Cholan', sno=4 where sno=2;
+-- this sno=4 not exist but if u run this query it doesn't show any error also no insertion
+update test set name='Raja Raja Cholan', sno=10 where sno=4;
 
 -- It deletes row based on condition
-delete from test1.test where sno=2;
+delete rows from test1.test;
 -- If you want to delete all rows in a table. You have table name with 0 rows
 truncate table test1.test;
 -- or truncate test1.test;

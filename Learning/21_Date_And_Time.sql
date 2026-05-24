@@ -32,7 +32,7 @@ SELECT
     DAYOFWEEK(event_date),
     DAYOFYEAR(event_date),
     DATE(event_date),
-    DATEDIFF(event_date, '2025-01-01'),
+    DATEDIFF(event_date, '2025-01-01'), -- careful when using it,  it can also provide -ve diff when sub 2025-01-05 with 2025-01-10
     DATE_ADD(event_date, INTERVAL 10 DAY),
     DATE_SUB(event_date, INTERVAL 10 DAY),
     DATE_FORMAT(event_date, '%W, %e %D %M %Y'), -- %e=%d

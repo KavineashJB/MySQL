@@ -30,3 +30,9 @@ from sales;
 SELECT trans_id, store, amount,
 avg(amount) over (PARTITION BY store) as avg_amt_by_store
 from sales;
+
+-- rolling avg between rows
+SELECT trans_id, store, amount,
+avg(amount) over (PARTITION BY store rows between 2 PRECEDING and current row) as avg_amt_by_store
+from sales;
+

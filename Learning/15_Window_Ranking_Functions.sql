@@ -24,10 +24,10 @@ SELECT * FROM employees;
 -- dup rows => since there are 2 alice with same id it may be the id unknowing assigned by respective team. So we need to filter only one alice who is joined firstly.
 
 -- filtering only emp_id who joined first
-with high as (
+with dup_rows as (
 select *, 
 ROW_NUMBER() over (PARTITION BY emp_id) as rownum from employees
-) SELECT * FROM high where rownum=1;
+) SELECT * FROM dup_rows where rownum=1;
 
 
 -- rank
@@ -54,11 +54,14 @@ SELECT * FROM students;
             -- Same rank for ties
             -- No gaps
 
-select *,
-row_number() over (ORDER BY score desc) as rownum,
-rank() over (ORDER BY score desc) as stu_rank, 
-dense_rank() over (ORDER BY score desc) as stu_dense_rank
-from students;
+with dense as (
+    select *,
+    row_number() over (ORDER BY score desc) as rownum,
+    rank() over (ORDER BY score desc) as stu_rank, 
+    dense_rank() over (ORDER BY score desc) as stu_dense_rank
+    from students
+) 
+SELECT * from dense where stu_dense_rank=2;
 
 -- percent_rank => range (0-1), 0-first, 1-last
 -- formula: percent_rank=(rank of row - 1)/(tot no.of rows - 1)
@@ -72,9 +75,10 @@ SELECT
 FROM students;
 
 
+
 -- ntile => used to separate the data
 -- separate the employees into 4 groups based on their salary so that soon after I can provide hike to them to 10% 
--- formula: ntile(n) = (tot no.of rows) / n
+-- formula: ntile(n) = (tot no.of rows) / n -> where n is no.of.grps
 -- if result is whole number to groups normally like 10/2= 5grps
 -- else if (10/4)=2.5
 -- base = 2 for each groups, remainder = 2 -> first and second rows have extra 1 (2+1=3)
