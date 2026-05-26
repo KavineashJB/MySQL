@@ -139,10 +139,11 @@ Their educational content and guidance were instrumental in shaping this MySQL i
 
 ## 📎 How to Use This Repository
 
-1. Start with the **Basics** folder
+1. Start with the **Learning** folder
 2. Progress topic by topic in sequence
-3. Practice using the **Exercises** section
+3. Practice it by executing each query and understand it
 4. Modify queries and experiment with datasets for deeper understanding
+5. Also just take a look in **Exercise** folder and do practice daily atleast one problem
 
 ---
 
