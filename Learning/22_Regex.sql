@@ -47,15 +47,15 @@ CREATE TABLE demo_data (
 
 INSERT INTO demo_data (full_name, phone, email, date_col, status, sku, username, notes)
 VALUES
-('John Smith',  '123-456-7890',  'john@example.com',  '2025-02-07',  'pending',  'ABCD',  'johnsmith',  'Ships to CA'),
-('Alice Johnson',  '(987) 654-3210',  'alice@@example.net',  '2025-02-07',  'inactive',  'SKU-123',  'alice',  'NY location'),
-('Bob Williams',  '+1-555-123-4567',  'bob@sample.org',  '20250207',  'complete',  '1SKU',  'bob123',  'Shipping to CA'),
-('Mary 1 White',  '(123) 123-4567',  'mary123@example.com',  '2025-13-31',  'PENDING',  'abc-999',  'mary_white',  'Something about CA or'),
+('John Smith',  '123-456-7890',  'john@example.com',  '-02-07',  'pending',  'ABCD',  'johnsmith',  'Ships to CA'),
+('Alice Johnson',  '(987) 654-3210',  'alice@@example.net',  '-02-07',  'inactive',  'SKU-123',  'alice',  'NY location'),
+('Bob Williams',  '+1-555-123-4567',  'bob@sample.org',  '0207',  'complete',  '1SKU',  'bob123',  'Shipping to CA'),
+('Mary 1 White',  '(123) 123-4567',  'mary123@example.com',  '-13-31',  'PENDING',  'abc-999',  'mary_white',  'Something about CA or'),
 ('Mark-Spencer',  '1234567890',  'mark@example.com',  '2024-11-02', 
  'active',  'SKU-9999',  'mark',  'Random note'),
 ('Jane O''Connor',    '987-654-3210',  'jane.o.connor@example.org',  '2024-12-31',  'inactive',  'ABCDE',  'janeO',  'Contains CA or NY'),
 ('Invalid Mail',  '000-000-0000',  'invalid@@example..com',  '2023-01-15',  'inactive',  'XYZ000',  'invalid',  'Double @ and dots'),
-('NoSpacesHere',  '+12-345-678-9012', 'nospaces@example.co', '2025-02-07', 'pending', 'SKU999', 'NoSpaces', 'Ends with .co domain');
+('NoSpacesHere',  '+12-345-678-9012', 'nospaces@example.co', '-02-07', 'pending', 'SKU999', 'NoSpaces', 'Ends with .co domain');
 
 -- 1. Not matching wiht Strict Date Format (YYYY-MM-DD)
 SELECT *

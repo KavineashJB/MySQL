@@ -32,11 +32,11 @@ INSERT INTO restaurants (id, name, location) VALUES
 (5, 'Green Leaf',       'Coimbatore');
 
 INSERT INTO orders (order_id, restaurant_id, cust_id, order_date) VALUES
-(101, 1, 1, '2025-01-05'),
-(102, 2, 3, '2025-01-06'),
-(103, 1, 2, '2025-01-07'),
-(104, 3, 1, '2025-01-08'),
-(105, 6, 4, '2025-01-09');
+(101, 1, 1, '-01-05'),
+(102, 2, 3, '-01-06'),
+(103, 1, 2, '-01-07'),
+(104, 3, 1, '-01-08'),
+(105, 6, 4, '-01-09');
 
 select * from restaurants;
 select * from orders;

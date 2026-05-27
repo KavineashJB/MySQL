@@ -41,7 +41,7 @@ VALUES
 ('2020-12-01', 'Charlie', 300.00),
 ('2021-07-20', 'Diana', 150.75),
 ('2022-03-02', 'Edward', 500.00),
-('2025-06-18', 'FutureMan', 9999.99);
+('-06-18', 'FutureMan', 9999.99);
 
 -- To check which column is used for partition in the table
 -- method 1 ==> using MySQL's information_schema table

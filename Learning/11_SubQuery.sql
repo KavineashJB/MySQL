@@ -23,11 +23,11 @@ CREATE TABLE orders (
 );
 
 INSERT INTO orders (order_id, customer_id, order_date, product, amount, order_status) VALUES
-(101, 1, '2025-01-10', 'Laptop',        55000.00, 'SUCCESS'),
-(102, 2, '2025-01-12', 'Mobile Phone',  22000.00, 'SUCCESS'),
-(103, 1, '2025-01-15', 'Wireless Mouse', 1200.00, 'CANCELLED'),
-(104, 3, '2025-01-18', 'Headphones',     3000.00, 'SUCCESS'),
-(105, 4, '2025-01-20', 'Smart Watch',    8000.00, 'PENDING');
+(101, 1, '-01-10', 'Laptop',        55000.00, 'SUCCESS'),
+(102, 2, '-01-12', 'Mobile Phone',  22000.00, 'SUCCESS'),
+(103, 1, '-01-15', 'Wireless Mouse', 1200.00, 'CANCELLED'),
+(104, 3, '-01-18', 'Headphones',     3000.00, 'SUCCESS'),
+(105, 4, '-01-20', 'Smart Watch',    8000.00, 'PENDING');
 
 SELECT * from orders;
 select * from customers;

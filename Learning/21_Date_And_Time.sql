@@ -17,10 +17,10 @@ CREATE TABLE events (
 
 INSERT INTO events (event_name, event_date)
 VALUES
-('Team Meeting', '2025-01-15 10:30:00'),
-('Conference', '2025-02-10 09:00:00'),
-('Online Webinar', '2025-03-05 15:45:00'),
-('Workshop', '2025-03-20 13:30:00');
+('Team Meeting', '-01-15 10:30:00'),
+('Conference', '-02-10 09:00:00'),
+('Online Webinar', '-03-05 15:45:00'),
+('Workshop', '-03-20 13:30:00');
 
 SELECT * FROM events;
 
@@ -32,7 +32,7 @@ SELECT
     DAYOFWEEK(event_date),
     DAYOFYEAR(event_date),
     DATE(event_date),
-    DATEDIFF(event_date, '2025-01-01'), -- careful when using it,  it can also provide -ve diff when sub 2025-01-05 with 2025-01-10
+    DATEDIFF(event_date, '-01-01'), -- careful when using it,  it can also provide -ve diff when sub -01-05 with -01-10
     DATE_ADD(event_date, INTERVAL 10 DAY),
     DATE_SUB(event_date, INTERVAL 10 DAY),
     DATE_FORMAT(event_date, '%W, %e %D %M %Y'), -- %e=%d
@@ -55,10 +55,10 @@ SELECT event_name, event_date, DATE_FORMAT(event_date, "%W-%w (%D-%d %M-%m %Y-%y
 -- changing timezones
 -- to convert timezones we need to install convert timezone utility
 -- you can run the below code in "OneCompiler" website.
-select '2025-01-01 10:00:00' as newYork_time, convert_tz('2025-01-01 10:00:00', 'America/New_York', 'Asia/Kolkata') as asia_time;
+select '-01-01 10:00:00' as newYork_time, convert_tz('-01-01 10:00:00', 'America/New_York', 'Asia/Kolkata') as asia_time;
 -- Output:
 -- +---------------------+---------------------+
 -- | newYork_time        | asia_time           |
 -- +---------------------+---------------------+
--- | 2025-01-01 10:00:00 | 2025-01-01 20:30:00 |
+-- | -01-01 10:00:00 | -01-01 20:30:00 |
 -- +---------------------+---------------------+

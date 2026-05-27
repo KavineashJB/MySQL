@@ -20,7 +20,7 @@ show databases;
 
 
 -- insertion
-insert into rides (ride_id, driver_id, rider_id, pickup_loc, drop_loc, ride_date, fare) values (1, 101, 201, 'Chennai', 'Covai', '2025-12-29 08:00:00', 500.00),(2, 102, 202, 'Bengaluru', 'Hyderabad', '2026-01-01 23:00:00', 800.00),(3, 103, 203, 'Chennai', 'Madurai', '2025-12-30 18:30:00', 400.00),(4, 104, 204, 'Covai', 'Chennai', '2025-12-31 05:30:00', 600.00),(5, 105, 205,  'Covai', 'Bengaluru', '2025-12-31 05:30:00', 700.00);
+insert into rides (ride_id, driver_id, rider_id, pickup_loc, drop_loc, ride_date, fare) values (1, 101, 201, 'Chennai', 'Covai', '-12-29 08:00:00', 500.00),(2, 102, 202, 'Bengaluru', 'Hyderabad', '2026-01-01 23:00:00', 800.00),(3, 103, 203, 'Chennai', 'Madurai', '-12-30 18:30:00', 400.00),(4, 104, 204, 'Covai', 'Chennai', '-12-31 05:30:00', 600.00),(5, 105, 205,  'Covai', 'Bengaluru', '-12-31 05:30:00', 700.00);
 
 SELECT * from uber.rides;
 desc uber.rides;

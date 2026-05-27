@@ -31,21 +31,21 @@ create table if not exists uber.rides (
 );
 desc uber.rides;
 
-insert into uber.rides values (1, 101, 201, 'Chennai', 'Covai', '2025-12-29 08:00:00', 500.00, null);
+insert into uber.rides values (1, 101, 201, 'Chennai', 'Covai', '-12-29 08:00:00', 500.00, null);
 -- composite key -> both primary key should be same as record already present in the record. even anyone is different it doesn't throw an error  
-insert into uber.rides values (1, 101, 202, 'Chennai', 'Covai', '2025-12-29 08:00:00', 500.00, 'user1@gmail.com');
+insert into uber.rides values (1, 101, 202, 'Chennai', 'Covai', '-12-29 08:00:00', 500.00, 'user1@gmail.com');
 
 SELECT * from uber.rides;
 
 -- unique constraint -> accepts multiple null but not allow dups
-insert into uber.rides values (1, 101, 201, 'Chennai', 'Covai', '2025-12-29 08:00:00', 500.00, null)
+insert into uber.rides values (1, 101, 201, 'Chennai', 'Covai', '-12-29 08:00:00', 500.00, null)
 
 -- not null
-insert into uber.rides values (1, 101, 201, 'Chennai', 'Covai', '2025-12-29 08:00:00', null, null) 
+insert into uber.rides values (1, 101, 201, 'Chennai', 'Covai', '-12-29 08:00:00', null, null) 
 -- Error: column fare cannot be null.
 
 -- check
-insert into uber.rides values (1, 101, 201, 'Chennai', 'Covai', '2025-12-29 08:00:00', 0, null)
+insert into uber.rides values (1, 101, 201, 'Chennai', 'Covai', '-12-29 08:00:00', 0, null)
 -- Error: Check constraint 'rides_chk_1' is violated.
 
 
@@ -76,7 +76,7 @@ create table if not exists uber.rides (
 
 insert into uber.drivers values (101, 'raja', 'ABC1234'),(102, 'vimal','XYZ4321');
 
-insert into uber.rides values (1, 101, 201, 'Chennai', 'Covai', '2025-12-29 08:00:00', 500.00,null),(2, 101, 202, 'Bengaluru', 'Hyderabad', '2026-01-01 23:00:00', 800.00,'rose123@gmail.com'),(3, 102, 203, 'Chennai', 'Madurai', '2025-12-30 18:30:00', 400.00,'ramsaran@gmail.com'),(4, 101, 204, 'Covai', 'Chennai', '2025-12-31 05:30:00', 600.00, 'user1@gmail.com'),(5, 102, 205,  'Covai', 'Bengaluru', '2025-12-31 05:30:00', 700.00, 'real@gmail.com');
+insert into uber.rides values (1, 101, 201, 'Chennai', 'Covai', '-12-29 08:00:00', 500.00,null),(2, 101, 202, 'Bengaluru', 'Hyderabad', '2026-01-01 23:00:00', 800.00,'rose123@gmail.com'),(3, 102, 203, 'Chennai', 'Madurai', '-12-30 18:30:00', 400.00,'ramsaran@gmail.com'),(4, 101, 204, 'Covai', 'Chennai', '-12-31 05:30:00', 600.00, 'user1@gmail.com'),(5, 102, 205,  'Covai', 'Bengaluru', '-12-31 05:30:00', 700.00, 'real@gmail.com');
 
 desc rides; 
 desc drivers;
