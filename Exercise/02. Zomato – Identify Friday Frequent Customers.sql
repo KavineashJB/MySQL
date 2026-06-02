@@ -1,4 +1,5 @@
-Question:
+Problem 2: Zomato – Identify Friday Frequent Customers
+
 Gowtham wants to find Zomato customers (like Karthik, Suresh) who placed orders on every Friday for the last 2 months continuously.
 
 drop table if exists zomato_orders;

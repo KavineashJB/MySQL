@@ -1,3 +1,9 @@
+### Not completed List:
+
+10. Netflix - continous tamil content consumer - how to find the user who didn't watch other lang movies only tamil for consecutive months
+
+11. Zomato - festival food order - What are all the major festivals and how to find it
+
 # NOTE
 
 In the `Exercise` folder, some queries may ask for records from the **last 2 months** (or recent dates).  

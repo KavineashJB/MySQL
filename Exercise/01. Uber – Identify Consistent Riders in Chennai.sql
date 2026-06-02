@@ -1,4 +1,5 @@
-Question:
+Problem 1: Uber – Identify Consistent Riders in Chennai
+
 Gowtham wants to find Uber customers (like Mani, Ravi) who completed at least 50 rides in Chennai over the last 3 months without any cancellations.
 
 drop table if EXISTS uber_rides;
